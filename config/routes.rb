@@ -1,12 +1,11 @@
+# coding: utf-8
 Rails.application.routes.draw do
-  get 'articles/new'
+  root 'welcome#index'  
   get 'welcome/index'
   # For details on the DSL available within this file
   # see http://guides.rubyonrails.org/routing.html
-  resources :articles do
-    resources :comments
-  end
-  root 'welcome#index'
+  get 'search/index'
+  get 'search' => "search#index"
 end
 
   

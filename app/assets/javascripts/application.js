@@ -14,3 +14,28 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+/* Scroll Func */
+function scrollFunc(evt) {  
+  evt = evt || window.event;  
+  if(evt.preventDefault) {  
+    evt.preventDefault();  
+    evt.stopPropagation();  
+  } else{  
+    evt.cancelBubble=true;  
+    evt.returnValue = false;  
+  }  
+  return false;  
+}
+
+function disable_scroll() {  
+  document.addEventListener('DOMMouseScroll', scrollFunc, false);  
+  document.addEventListener('mousewheel',scrollFunc,false);
+}
+
+function allow_scroll(){
+  document.removeEventListener('DOMMouseScroll',scrollFunc,false);
+  document.removeEventListener('mousewheel',scrollFunc,false);
+}
+
+

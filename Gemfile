@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.3.7'
 
+# Typhoeus
+gem "typhoeus"
+
 # PRY
 gem "pry"
 gem "pry-doc", '~> 0.6.0'

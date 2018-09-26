@@ -1,5 +1,7 @@
 class SearchController < ApplicationController
   def index
-    p params["search"]
+    text = params["search"]    
+    res = Typhoeus.get("localhost:1439/search?text=#{text}")
+    puts res.body;    
   end
 end

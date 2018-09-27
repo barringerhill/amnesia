@@ -1,5 +1,7 @@
-<h1>Amnesia.pub</h1>
-<%= form_tag("/search", method: "get") do %>
-  <%= text_field_tag(:search) %>
-  <%= submit_tag("101010") %>
-<% end %>
+<div class="container">
+  <h1 style="margin-top: 30rem;">Amnesia.pub</h1>
+  <%= form_tag("/search", id: "welcome-form", method: "get") do %>
+    <%= text_field_tag(:search) %>
+    <%= submit_tag("101010") %>
+  <% end %>
+</div>

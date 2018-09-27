@@ -1,12 +1,14 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 h1 {
     font-size: 4rem;
     text-align: center;
-    margin-top: -20rem;
     margin-bottom: 3rem;
+}
+
+.index-title{
+    margin-top: 20rem;
 }
 
 .page-container > form > input{
@@ -17,15 +19,25 @@ h1 {
 #search {
     font-size: 1.3rem;
     height: 4rem;
-    width: 42rem;
+    width: 30rem;
     padding-left: 2rem;
     padding-right: 2rem;    
     border-width: 0.1rem;
     border-color: #000;    
 }
 
+#welcome-form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
 form [type=submit] {
-    font-size: 1.2rem;        
+    outlinie: none;
+    margin-top: 2rem;
+    font-size: 1.2rem; 
     background-color: #fff;
     border-left-width: 0rem;
     margin-left: 0.3rem;

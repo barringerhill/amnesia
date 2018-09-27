@@ -6,6 +6,9 @@ ruby '2.3.7'
 # Typhoeus
 gem "typhoeus"
 
+# Kaminari
+gem "kaminari"
+
 # PRY
 gem "pry"
 gem "pry-doc", '~> 0.6.0'

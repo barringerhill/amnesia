@@ -1,2 +1,7 @@
-<h1>Hello, world</h1>
+<div class="container">
+  <div align="center" class="title"><%= @text %></div>
+  <% @res.each do |post| %>
+    <div class="post"> <%= simple_format(JSON.parse(post)['Data']) %> </div>
+  <% end %>
+</div>
   

@@ -1,7 +1,11 @@
 <div class="container">
   <div align="center" class="title"><%= @text %></div>
   <% @res.each do |post| %>
-    <div class="post"> <%= simple_format(JSON.parse(post)['Data']) %> </div>
+    <div class="post">
+      <%#       Hash: <%= simple_format(JSON.parse(post)['Hash']) %><br/> %>
+      <%#       Content: <%= simple_format(JSON.parse(post)['Data']) %> %>
+      <%= simple_format(post) %>      
+    </div>    
   <% end %>
 </div>
   

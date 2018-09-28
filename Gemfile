@@ -9,6 +9,9 @@ gem "typhoeus"
 # Kaminari
 gem "kaminari"
 
+# jquery
+gem 'jquery-rails'
+
 # PRY
 gem "pry"
 gem "pry-doc", '~> 0.6.0'

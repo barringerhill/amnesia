@@ -14,6 +14,7 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery
 
 /* Scroll Func */
 function scrollFunc(evt) {  
@@ -37,5 +38,3 @@ function allow_scroll(){
   document.removeEventListener('DOMMouseScroll',scrollFunc,false);
   document.removeEventListener('mousewheel',scrollFunc,false);
 }
-
-

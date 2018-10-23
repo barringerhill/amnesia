@@ -1,10 +1,8 @@
-// import _ from 'lodash';
-
 function component() {
   let element = document.createElement('div');
 
-  element.innerHTML = "Hello, webpack!"
-  
+  element.innerHTML = 'hello world';
+
   return element;
 }
 

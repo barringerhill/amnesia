@@ -1,6 +1,5 @@
-import DOM from './lib/dom';
-import Router from './lib/router';
 import './styles/main.css';
+import {Element, Router} from './lib';
 
 // STYLES
 window.document.body.style = `
@@ -8,15 +7,19 @@ window.document.body.style = `
 `;
 
 // MAIN DOM
-const d = new DOM();
-let a = d.c('app', '', {'id': 'app'});
-document.body.appendChild(a);
+let e = new Element()
+let a = e.i('div', {'id': 'amnesia'});
+a.t(document.body);
 
 // Router
 const r = new Router();
 const popstate = () => {
-  let hash = window.location.hash.match(/#.*/)[0].slice(1);
-  r.route(hash);
+  let hash = window.location.hash.match(/#.*/);
+  if(hash){
+    r.route(hash[0].slice(1));
+  }else{
+    r.route('home');
+  }
 }
 
 popstate();

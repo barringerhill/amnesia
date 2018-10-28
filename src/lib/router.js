@@ -1,9 +1,11 @@
+/* ROUTER */
 
 export default class Router {
-  
   route(path){
-    switch (path) {
-        default: require('../views/home.js')
+    try {
+      require(`../views/${path}.js`);
+    } catch(e) {
+      require(`../views/home.js`);
     }
   }
 }

@@ -1,0 +1,27 @@
+/* post */
+.model-post-wrapper {
+    margin: 2rem 1rem;
+}
+
+.model-post-content {
+    padding: 2rem;
+    border: 1px solid #999;    
+}
+
+.model-post-title {
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #999;
+}
+
+.model-post-body {
+    margin: 4rem 2rem;
+    word-break: break-all;
+}
+
+.model-post-foot {
+    font-size: 0.8rem;
+    text-align: right;
+    border-top: 1px solid #999;
+    padding-top: 10px;
+}

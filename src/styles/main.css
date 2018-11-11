@@ -17,7 +17,7 @@ body, input, select, textarea {
 }
 
 body {
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
     line-height: 1.6;
     height: auto;

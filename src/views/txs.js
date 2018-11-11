@@ -15,6 +15,8 @@ const amnesia = d.id('amnesia');
 amnesia.innerHTML = '';
 
 // DOM
+document.body.style.overflow = 'auto';
+
 // structure
 let head_txs = e.i('div', {'id': 'head_txs', 'class': 'head_txs'}).t(amnesia);
 let page_txs = e.i('section', {'class': 'page_txs'}).t(amnesia);
@@ -27,7 +29,9 @@ let cw_c = e.i('div', {'class': 'cw_c'}).t(core_txs);
 Model_Search_Button(() => {
   window.location.hash = `#txs?text=${d.id('search_input').value}`;
   window.location.reload();
-},'txs').t(head_txs);
+},'txs').t(head_txs)
+
+d.id('search_input').value = decodeURI(window.location.hash.match(/text=(.*)/)[1])
 
 /* render function */
 let lock = false;
@@ -80,7 +84,7 @@ try {
 
 render_model(page, text);
 
-window.onscroll = function() {
+window.onscroll = function(e) {
   if(lock == true) {return}
   let minus = s.getScrollHeight() - s.getClientHeight() - s.getScrollTop();
   if(minus < 200){

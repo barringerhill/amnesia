@@ -2,6 +2,7 @@
 .page_txs {
     position: absolute;
     margin: auto;
+    margin-bottom: 5rem;
     width: 100%;
     top: 24%;
     left: 0;
@@ -15,7 +16,7 @@
 
 .model-post-content {
     padding: 2rem;
-    border: 1px solid #999;
+    border: 1px solid #999;    
 }
 
 .model-post-title {
@@ -26,6 +27,7 @@
 
 .model-post-body {
     margin: 4rem 2rem;
+    word-break: break-all;
 }
 
 .model-post-foot {

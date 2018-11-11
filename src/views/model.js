@@ -9,7 +9,8 @@ export function Model_Search_Button(method, page) {
   let search_w = e.i('div', {'class': `search_wrap_${page}`});
   let search_form = e.i('div', {'class': `search_form_${page}`}).t(search_w);
   let search_input = e.i('input', {
-    'class': 'search_input',
+    'id': 'search_input',
+    'class': 'search_input',    
     'placeholder': ''
   },{
     'input': e => search_input_controller(e)

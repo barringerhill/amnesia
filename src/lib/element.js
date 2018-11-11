@@ -27,10 +27,9 @@ export default class Element {
       }, el);
 
     // set text
-    el.textContent = text;
-
+    text?el.innerHTML = text:'';
     return el;
-  }  
+  }
   
   constructor(tag, options = {}, methods = {}, text) {
     this.tag = tag;

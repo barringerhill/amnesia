@@ -16,7 +16,9 @@ const r = new Router();
 const popstate = () => {
   let hash = window.location.hash.match(/#.*/);
   if(hash){
-    r.route(hash[0].slice(1));
+    hash[0].match(/\?/)?
+      r.route(hash[0].slice(1, hash[0].indexOf('?'))):
+      r.route(hash[0].slice(1));
   }else{
     r.route('home');
   }

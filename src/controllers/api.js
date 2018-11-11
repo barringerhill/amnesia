@@ -6,7 +6,7 @@ export function read(page, cb) {
     .then(res => cb(res))
 }
 
-export function search(text, cb) {
-  g(`http://localhost:1439/search?text=${text}`)
+export function search(text, page, cb) {
+  g(`http://localhost:1439/search?text=${text}&page=${page}`)
     .then(res => cb(res))
 }

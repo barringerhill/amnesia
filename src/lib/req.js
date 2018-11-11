@@ -1,5 +1,4 @@
 /* Request */
-
 export function g(path) {
   return fetch(path)
     .then(res => res.json())

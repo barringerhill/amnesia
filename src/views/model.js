@@ -1,9 +1,13 @@
-/* model */
+import { Element } from '../lib';
+import { search_input_controller } from '../controllers/home.js';
 
+const e = new Element();
+
+/* model */
 // InputGroup
-function SearchButton(method, page) {
+export function Model_Search_Button(method, page) {
   let search_w = e.i('div', {'class': `search_wrap_${page}`});
-  let search_form = e.i('div', {'class': `search_form$_${page}`}).t(search_w);
+  let search_form = e.i('div', {'class': `search_form_${page}`}).t(search_w);
   let search_input = e.i('input', {
     'class': 'search_input',
     'placeholder': ''
@@ -20,4 +24,19 @@ function SearchButton(method, page) {
   }).t(search_form);
 
   return search_w;
+}
+
+// PostModel
+export function Model_Post(n, d, h) {
+  let model_wrapper = e.i('div', {'class': 'model-post-wrapper'});
+  let model_post_content = e.i('div', {'class': 'model-post-content'})
+    .t(model_wrapper);
+
+  Element.b([
+    ['div', {'class': 'model-post-title'}, {}, n],
+    ['div', {'class': 'model-post-body'}, {}, d],
+    ['div', {'class': 'model-post-foot'}, {}, h],
+  ]).map(e => e.t(model_post_content));
+
+  return model_wrapper;
 }

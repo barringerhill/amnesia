@@ -20,7 +20,6 @@ let core_txs = e.i('div', {'class': 'core_txs'}).t(wing_txs);
 let cw_c = e.i('div', {'class': 'cw_c'}).t(core_txs);
 
 // test
-
 read(0, res => {
   res.map(data => {
     data = JSON.parse(data);

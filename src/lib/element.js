@@ -3,13 +3,13 @@
 export default class Element {
   //@static 'b' - batch
   static b(o) {
-    return Object.entries(o).map(([tag, options]) => {
-      return new Element().i(tag, ...options);
+    return o.map((options) => {
+      return new Element().i(...options);
     });
   }
   
   //@static 'c' - create
-  static c(tag, options = {}, methods = {}) {
+  static c(tag, options = {}, methods = {}, text) {
     let el = document.createElement(tag);
 
     // set attributes
@@ -26,19 +26,23 @@ export default class Element {
         return element;
       }, el);
 
+    // set text
+    el.textContent = text;
+
     return el;
   }  
   
-  constructor(tag, options = {}, methods = {}) {
+  constructor(tag, options = {}, methods = {}, text) {
     this.tag = tag;
     this.options = options;
     this.methods = methods;
-    this.element = Element.c(tag, options, methods);
+    this.text = text;
+    this.element = Element.c(tag, options, methods, text);
   }
 
   //@method 'i' - init
-  i(tag, options = {}, methods = {}) {
-    return new Element(tag, options, methods);
+  i(tag, options = {}, methods = {}, text) {
+    return new Element(tag, options, methods, text);
   }
 
   //@method 'a' - append
@@ -48,11 +52,15 @@ export default class Element {
 
   //@method 't' - tree
   t(father) {
+    father.element? father = father.element :'';
     father.appendChild(this.element);
+
+    return this;
   }
 
   //@method 'p' - place
   p(text) {
     this.element.textContent = text;
+    return this;
   }
 }

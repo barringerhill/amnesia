@@ -5,6 +5,7 @@ export default class Router {
     try {
       require(`../views/${path}.js`);
     } catch(e) {
+      console.error(e);
       require(`../views/home.js`);
     }
   }
